@@ -11,7 +11,6 @@ module.exports = class User {
     async save() {
         const sql = "INSERT INTO users (user_id, username, password) VALUES (?, ?, ?)"
         const params = [this.user_id, this.username, this.password]
-        console.log(params);
         return db.execute(sql, params)
     }
 
@@ -30,4 +29,8 @@ module.exports = class User {
         return await db.execute(sql, [username])
     }
 
+    static async checkUserName(username) {
+        const sql = "SELECT ? from users WHERE username = ?"
+        return await db.execute(sql, [username, username])
+    }
 }

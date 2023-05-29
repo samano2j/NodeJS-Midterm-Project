@@ -60,7 +60,7 @@ const postLogin = async (req, res, next) => {
 
 const getSignUp = async (req, res, next) => {
     try {
-        res.render('signup', { title: 'Sign Up' })
+        res.render('signup', { title: 'Sign Up', header: 'Sign Up'})
     } catch (error) {
         res.render('error', { title: "Something went wrong", message: error.message })
     }
@@ -69,9 +69,15 @@ const getSignUp = async (req, res, next) => {
 const postSignUp = async (req, res, next) => {
     const { username, password } = req.body
     try {
-        const newUser = new User(username, password)
-        await newUser.save()
-        res.render('login', { title: 'Log In', header: 'Sign Up Successful!' })
+        const matchUser = await User.checkUserName(username)
+        if(matchUser[0].length > 0) {
+            res.render('signup', { title: 'Sign Up', header: 'Username already used' })
+        } 
+        else {
+            const newUser = new User(username, password)
+            await newUser.save()
+            res.render('login', { title: 'Log In', header: 'Sign Up Successful!' })
+        }
     } catch (error) {
         res.render('error', { title: "Something went wrong", message: error.message })
     }
