@@ -1,7 +1,8 @@
 const router = require('express').Router()
-const { } = require('../controllers/users.controller')
-const { postLikePost, postLogout, getLogin, getSignUp, postLogin, postSignUp, getAllPosts, getUserPosts, postAddPost, deletePost, getEditPost, postEditPost, getAllComments, postAddComment, deleteComment, getEditComment, postEditComment } = require('../controllers/posts.controller')
-const { } = require('../controllers/comments.controller')
+const { getLogin, getSignUp, postLogin, postSignUp, postLogout } = require('../controllers/users.controller')
+const { getAllPosts, getUserPosts, postAddPost, deletePost, getEditPost, postEditPost } = require('../controllers/posts.controller')
+const { getAllComments, postAddComment, deleteComment, getEditComment, postEditComment} = require('../controllers/comments.controller')
+const { postLikePost } = require('../controllers/likes.controller')
 
 router.route('/login').get(getLogin).post(postLogin)
 router.route('/signup').get(getSignUp).post(postSignUp)

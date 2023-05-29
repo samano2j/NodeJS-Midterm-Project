@@ -678,6 +678,11 @@ textarea {
   font-weight: 700;
 }
 
+.form-post button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(56 189 248 / var(--tw-bg-opacity));
+}
+
 li {
   display: flex;
   justify-content: space-between;
@@ -714,6 +719,11 @@ li p {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(56 189 248 / var(--tw-bg-opacity));
+}
+
 .buttonLike {
   width: 100%;
   border-radius: 0.5rem;
@@ -726,6 +736,64 @@ li p {
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.buttonLike:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}
+
+.red-heart {
+    color: #be185d;
+    font-size: 1.5rem; 
+    line-height: 2rem; 
+}
+
+.red-heart:hover {
+    color: #4b5563;
+}
+
+.sad-heart, .disable {
+    color: #4b5563;
+    font-size: 1.5rem; 
+    line-height: 2rem; 
+}
+
+.sad-heart:hover {
+    color: #be185d;
+}
+
+.edit-button, .delete-button, .comment-button {
+    color: rgb(14 165 233);
+    font-size: 1.5rem; 
+    line-height: 2rem; 
+}
+
+.edit-button:hover, .delete-button:hover, .comment-button:hover {
+    color: rgb(56 189 248);
+}
+
+
+
+.buttonLikeDisable {
+  width: 100%;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+
+
+.buttonLikeDisable:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(190 24 93 / var(--tw-bg-opacity));
 }
 
 .buttonDisable {

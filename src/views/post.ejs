@@ -10,14 +10,12 @@
       <div class="flex gap-5 items-center">
       <form action="/twitter/like/<%= post.post_id %>" method="POST">
         <button class="<% if (post.isLiked.length > 0) {  %>
-          buttonLike
         <% } else { %>
-          buttonDisable
         <% } %>" type="submit">
           <% if (post.isLiked.length > 0) {  %>
-            Unlike
+            <i class="fa-solid fa-heart red-heart"></i>
           <% } else { %>
-            Like
+            <i class="fa-regular fa-heart sad-heart"></i>
           <% } %>
         </button>
       </form>
@@ -26,20 +24,20 @@
       <p class="text-sm"><%= post.formatDate %></p>
       </div>
   </div>
-  <div class="flex flex-col gap-2 self-center">
+  <div class="flex flex-col gap-5 self-center">
   <% if (currentUser !== post.username) { %>
-  <a class="buttonDisable">Update</a>
+  <a class=""><i class="fa-solid fa-pen-to-square disable"></i></a>
   <% } else { %>
-  <a class="button" href="/twitter/edit/post/<%= post.post_id %>">Update</a>
+  <a class="" href="/twitter/edit/post/<%= post.post_id %>"><i class="fa-solid fa-pen-to-square edit-button"></i></a>
   <% } %>
   <form action="/twitter/<%= post.post_id %>?_method=DELETE" method="POST">
     <% if (currentUser !== post.username) { %>
-      <button class="buttonDisable" type="submit" disabled>Delete</button>
+      <button class="" type="submit" disabled><i class="fa-solid fa-trash disable"></i></button>
     <% } else { %>
-      <button class="button" type="submit">Delete</button>
+      <button class="" type="submit"><i class="fa-solid fa-trash delete-button"></i></button>
     <% } %>
   </form>
-  <a class="button" href="/twitter/post/<%= post.post_id %>">Comment</a>
+  <a class="" href="/twitter/post/<%= post.post_id %>"><i class="fa-solid fa-comment comment-button"></i></a>
   </div>  
 </div>
 <form action="/twitter/post/<%= post.post_id %>" method="POST" class="form-post">
@@ -61,17 +59,17 @@
         </div>
         <p class="text-sm"><%= comment.formatDate %></p>
         </div>
-        <div class="flex flex-col gap-2 self-center">
+        <div class="flex flex-col gap-5 self-center">
         <% if (currentUser !== comment.username) { %>
-        <a class="buttonDisable">Update</a>
+        <a class=""><i class="fa-solid fa-pen-to-square disable"></a>
         <% } else { %>
-        <a class="button" href="/twitter/edit/comment/<%= comment.comment_id %>">Update</a>
+        <a class="" href="/twitter/edit/comment/<%= comment.comment_id %>"><i class="fa-solid fa-pen-to-square edit-button"></i></a>
         <% } %>
         <form action="/twitter/post/<%= comment.post_id %>/comment/<%= comment.comment_id %>?_method=DELETE" method="POST">
           <% if (currentUser !== comment.username) { %>
-            <button class="buttonDisable" type="submit" disabled>Delete</button>
+            <button class="" type="submit" disabled><i class="fa-solid fa-trash disable"></i></button>
           <% } else { %>
-            <button class="button" type="submit">Delete</button>
+            <button class="" type="submit"><i class="fa-solid fa-trash delete-button"></i></button>
           <% } %>
         </form>
     </li>

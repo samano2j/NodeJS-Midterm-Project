@@ -27,6 +27,8 @@ module.exports = class Post {
     static async deletePost(id) {
         const sql1 = "DELETE FROM posts WHERE post_id = ?"
         const sql2 = "DELETE FROM comments WHERE post_id = ?"
+        const sql3 = "DELETE FROM likes WHERE post_id = ?"
+        await db.execute(sql3, [id])
         await db.execute(sql2, [id])
         return db.execute(sql1, [id])
     }

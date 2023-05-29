@@ -18,6 +18,7 @@ app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 app.use(express.static('public'))
 app.use(methodOverride("_method"))
+app.use('/node_modules', express.static('node_modules'));
 // app.use(session({
 //   secret: process.env.SESSION_SECRET || 'your_secret_key_here',
 //   resave: false,

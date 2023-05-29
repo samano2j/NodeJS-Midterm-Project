@@ -15,7 +15,7 @@ textarea {
 }
 
 .form-post button {
-    @apply p-2 text-lg font-bold bg-sky-500 w-1/5 ml-auto rounded-full;
+    @apply p-2 text-lg font-bold bg-sky-500 w-1/5 ml-auto rounded-full hover:bg-sky-400;
 }
 
 li {
@@ -31,11 +31,47 @@ li p {
 }
 
 .button {
-    @apply text-white p-2 text-lg font-bold bg-sky-500 rounded-lg w-full text-center;
+    @apply text-white p-2 text-lg font-bold bg-sky-500 rounded-lg w-full text-center hover:bg-sky-400;
 }
 
 .buttonLike {
-    @apply text-white p-2 text-lg font-bold bg-pink-700 rounded-lg w-full text-center;
+    @apply text-white p-2 text-lg font-bold bg-pink-700 rounded-lg w-full text-center hover:bg-gray-600;
+}
+
+.red-heart {
+    color: #be185d;
+    font-size: 1.5rem; 
+    line-height: 2rem; 
+}
+
+.red-heart:hover {
+    color: #4b5563;
+}
+
+.sad-heart, .disable {
+    color: #4b5563;
+    font-size: 1.5rem; 
+    line-height: 2rem; 
+}
+
+.sad-heart:hover {
+    color: #be185d;
+}
+
+.edit-button, .delete-button, .comment-button {
+    color: rgb(14 165 233);
+    font-size: 1.5rem; 
+    line-height: 2rem; 
+}
+
+.edit-button:hover, .delete-button:hover, .comment-button:hover {
+    color: rgb(56 189 248);
+}
+
+
+
+.buttonLikeDisable {
+    @apply text-white p-2 text-lg font-bold bg-gray-600 rounded-lg w-full text-center hover:bg-pink-700;
 }
 
 .buttonDisable {
