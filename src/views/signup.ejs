@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="/style.css" rel="stylesheet" type="text/css" >
+</head>
+<body class="bg-black text-white flex flex-col text-center w-4/5 m-auto mt-28">
+    <h1 class="text-7xl my-5">Sign Up</h1>
+    <form action="/twitter/signup" method="POST" class="flex flex-col gap-10 w-4/5 m-auto">
+        <input
+            type="text"
+            placeholder="Username"
+            name="username"
+            required
+        />
+        <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            required
+        />
+        <button type="submit" class="text-white p-4 text-2xl font-bold bg-sky-500 rounded-full w-1/3 m-auto text-center">Sign Up</button>
+    </form>
+</body>
+</html>

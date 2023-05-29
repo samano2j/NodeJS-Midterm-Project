@@ -1,0 +1,20 @@
+<%- include('partials/head.ejs') %>
+<div class="flex flex-col text-center w-4/5 m-auto">
+<h1><%= title %></h1>
+<form action="/twitter/edit/<%= type %>/<%= id %>" method="POST"
+    class="text-xl border border-slate-600 flex text-left justify-between p-5">
+    <div class="max-w-sm flex flex-col gap-2">
+    <p class="font-bold text-sky-500"><%= username %></p>
+    <textarea
+        type="text"
+        name="content"
+        class="bg-white text-black"
+    ><%= content %></textarea>
+    </div>
+    <div class="flex flex-col gap-2 self-center">
+        <button class="button" type="submit">Update</button>
+        <a class="button" href="<%= previousUrl %>">Back</a>
+    </div>
+</form>
+</div>
+<%- include('partials/foot.ejs') %>

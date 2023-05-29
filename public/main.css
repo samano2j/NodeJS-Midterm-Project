@@ -1,0 +1,51 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+h1 {
+    @apply text-4xl font-bold p-5 text-sky-500;
+}
+
+textarea {
+    @apply resize-none text-white p-2 bg-black text-2xl;
+}
+
+.form-post {
+    @apply border border-slate-600 flex flex-col gap-5 p-5;
+}
+
+.form-post button {
+    @apply p-2 text-lg font-bold bg-sky-500 w-1/5 ml-auto rounded-full;
+}
+
+li {
+    @apply text-xl border border-slate-600 flex text-left justify-between p-5;
+}
+
+li a {
+    @apply font-bold text-sky-500;
+}
+
+li p {
+    @apply break-words ;
+}
+
+.button {
+    @apply text-white p-2 text-lg font-bold bg-sky-500 rounded-lg w-full text-center;
+}
+
+.buttonLike {
+    @apply text-white p-2 text-lg font-bold bg-pink-700 rounded-lg w-full text-center;
+}
+
+.buttonDisable {
+    @apply text-white p-2 text-lg font-bold bg-gray-600 rounded-lg w-full text-center;
+}
+
+input {
+    @apply p-5 text-xl rounded-full text-black;
+}
+
+i {
+    @apply text-white text-2xl;
+}

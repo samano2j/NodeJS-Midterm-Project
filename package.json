@@ -1,0 +1,43 @@
+{
+  "name": "nodejs-midterm-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index",
+    "dev": "concurrently \"nodemon src/index\" \"postcss public/main.css -o public/style.css -w\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samano2j/NodeJS-Midterm-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samano2j/NodeJS-Midterm-Project/issues"
+  },
+  "homepage": "https://github.com/samano2j/NodeJS-Midterm-Project#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "body-parser": "^1.20.2",
+    "cookie-session": "^2.0.0",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-mysql-session": "^3.0.0",
+    "express-session": "^1.17.3",
+    "memorystore": "^1.6.7",
+    "method-override": "^3.0.0",
+    "mysql2": "^3.3.2",
+    "path": "^0.12.7",
+    "postcss": "^8.4.23",
+    "postcss-cli": "^10.1.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "tailwindcss": "^3.3.2"
+  }
+}
